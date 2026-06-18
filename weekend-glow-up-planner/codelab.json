@@ -1,0 +1,32 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2026-06-16T22:31:40+03:00",
+  "id": "weekend-glow-up-planner",
+  "duration": 41,
+  "title": "Build a Weekend Glow-Up Planner with Parallel Subagents",
+  "authors": "evanca",
+  "summary": "Use one Antigravity 2.0 orchestrator agent to spawn parallel subagents — first to analyze, then to generate disjoint parts — and ship a verified Weekend Glow-Up Planner.",
+  "source": "codelab.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "antigravity",
+    "gemini",
+    "web"
+  ],
+  "tags": [
+    "antigravity-2.0",
+    "orchestration",
+    "parallel",
+    "stitch",
+    "subagents",
+    "web"
+  ],
+  "feedback": "https://github.com/evanca/gde-sprint-26-subagents-public/issues",
+  "url": "weekend-glow-up-planner"
+}

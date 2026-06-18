@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string" },
+      "name": { "type": "string" },
+      "tagline": { "type": "string" },
+      "heroImage": { "type": "string" },
+      "colorPalette": {
+        "type": "object",
+        "properties": {
+          "primary": { "type": "string" },
+          "secondary": { "type": "string" },
+          "accent": { "type": "string" },
+          "text": { "type": "string" },
+          "gradient": { "type": "string" }
+        },
+        "required": ["primary", "secondary", "accent", "text", "gradient"]
+      },
+      "outfitPrompt": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "description": { "type": "string" },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["title", "description", "tags"]
+      },
+      "packingNotes": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "cafeStops": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "description": { "type": "string" },
+            "distance": { "type": "string" }
+          },
+          "required": ["name", "description", "distance"]
+        }
+      },
+      "selfCareChecklist": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string" },
+            "task": { "type": "string" },
+            "done": { "type": "boolean" }
+          },
+          "required": ["id", "task", "done"]
+        }
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "tagline",
+      "colorPalette",
+      "outfitPrompt",
+      "packingNotes",
+      "cafeStops",
+      "selfCareChecklist"
+    ]
+  }
+}

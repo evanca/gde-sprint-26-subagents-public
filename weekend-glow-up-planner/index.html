@@ -1,0 +1,451 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <!-- seo:stamped -->
+  <meta name="description" content="Use an Antigravity 2.0 orchestrator to spawn parallel subagents that analyze, then generate disjoint files, to ship a verified Weekend Glow-Up Planner.">
+  <meta name="keywords" content="antigravity-2.0, subagents, orchestration, parallel, stitch, web">
+  <meta name="author" content="evanca">
+  <link rel="canonical" href="https://happycode.studio/gde-sprint-26-subagents-public/weekend-glow-up-planner/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Build a Weekend Glow-Up Planner with Parallel Subagents">
+  <meta property="og:description" content="Use an Antigravity 2.0 orchestrator to spawn parallel subagents that analyze, then generate disjoint files, to ship a verified Weekend Glow-Up Planner.">
+  <meta property="og:url" content="https://happycode.studio/gde-sprint-26-subagents-public/weekend-glow-up-planner/">
+  <meta property="og:site_name" content="2026 Agentic Architect Sprint by Google">
+  <meta property="og:image" content="https://happycode.studio/gde-sprint-26-subagents-public/weekend-glow-up-planner/img/36765c55c60b6513.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Build a Weekend Glow-Up Planner with Parallel Subagents">
+  <meta name="twitter:description" content="Use an Antigravity 2.0 orchestrator to spawn parallel subagents that analyze, then generate disjoint files, to ship a verified Weekend Glow-Up Planner.">
+  <meta name="twitter:image" content="https://happycode.studio/gde-sprint-26-subagents-public/weekend-glow-up-planner/img/36765c55c60b6513.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TechArticle",
+      "headline": "Build a Weekend Glow-Up Planner with Parallel Subagents",
+      "description": "Use an Antigravity 2.0 orchestrator to spawn parallel subagents that analyze, then generate disjoint files, to ship a verified Weekend Glow-Up Planner.",
+      "url": "https://happycode.studio/gde-sprint-26-subagents-public/weekend-glow-up-planner/",
+      "inLanguage": "en",
+      "keywords": "antigravity-2.0, subagents, orchestration, parallel, stitch, web",
+      "author": {
+        "@type": "Person",
+        "name": "evanca"
+      },
+      "isPartOf": {
+        "@type": "Course",
+        "name": "2026 Agentic Architect Sprint by Google",
+        "url": "https://happycode.studio"
+      },
+      "image": "https://happycode.studio/gde-sprint-26-subagents-public/weekend-glow-up-planner/img/36765c55c60b6513.png"
+    },
+    {
+      "@type": "HowTo",
+      "name": "Build a Weekend Glow-Up Planner with Parallel Subagents",
+      "description": "Use an Antigravity 2.0 orchestrator to spawn parallel subagents that analyze, then generate disjoint files, to ship a verified Weekend Glow-Up Planner.",
+      "totalTime": "PT41M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Prepare Antigravity 2.0"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Prepare Your Workspace"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Generate the Starter UI with Stitch"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Open the Workspace in Antigravity 2.0"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Run the Parallel Subagent Orchestration"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Inspect the Orchestration Result"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "name": "Verify the App"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "2026 Agentic Architect Sprint by Google",
+          "item": "https://happycode.studio"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Build a Weekend Glow-Up Planner with Parallel Subagents",
+          "item": "https://happycode.studio/gde-sprint-26-subagents-public/weekend-glow-up-planner/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+  <style id="cl-prompt-plain">
+    /* Render ```text blocks (prompts, trees) as plain monospace, not syntax-colored. */
+    pre code[class*="language-text"] span { color: inherit !important; background: transparent !important; font-weight: inherit !important; font-style: inherit !important; }
+  </style>
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVZ48SGNV9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-QVZ48SGNV9');
+  </script>
+
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Build a Weekend Glow-Up Planner with Parallel Subagents</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="weekend-glow-up-planner"
+                  title="Build a Weekend Glow-Up Planner with Parallel Subagents"
+                  environment="web"
+                  feedback-link="https://github.com/evanca/gde-sprint-26-subagents-public/issues">
+    
+      <google-codelab-step label="Introduction" duration="3">
+        <p>This codelab is part of the <strong>2026 Agentic Architect Sprint by Google</strong>.</p>
+<p>In it, you use <strong>Antigravity 2.0</strong> to turn a Stitch prototype into a small, working Weekend Glow-Up Planner. The lesson is about how a single <strong>orchestrator</strong> agent decomposes the work and spawns short-lived <strong>subagents</strong> that run <strong>in parallel</strong> across two phases.</p>
+<p>In Antigravity 2.0, the main agent can dynamically define and invoke subagents. Each subagent runs as a concurrent session with its <strong>own isolated context window</strong>, does not inherit the orchestrator&#39;s chat history, and consolidates its work into a single response back to the orchestrator. You will use this twice:</p>
+<ul>
+<li><strong>Phase 1 — parallel analysis:</strong> three report-only subagents inspect the prototype, the data contract, and the UX contract concurrently.</li>
+<li><strong>Phase 2 — parallel generation:</strong> three subagents each build a different, non-overlapping file against an interface the orchestrator defines, then the orchestrator integrates and verifies.</li>
+</ul>
+<aside class="special"><p> Each subagent runs with its own isolated context window. Detailed inspection and generation happen off to the side, so the orchestrator&#39;s context stays focused on the architectural decisions and the final integration. </p>
+</aside>
+<p>This codelab uses <strong>Local Mode</strong>, where agents work directly in the active project folders. Parallel generation stays conflict-free here because each generation subagent owns a different file. When peer agents must edit the <em>same</em> files concurrently, you need isolated Git worktrees instead — a separate integration discipline beyond this codelab&#39;s scope.</p>
+<p>Official references:</p>
+<ul>
+<li><a href="https://antigravity.google/product/antigravity-2" target="_blank">Antigravity 2.0 overview</a></li>
+<li><a href="https://antigravity.google/docs/getting-started" target="_blank">Antigravity 2.0 getting started</a></li>
+<li><a href="https://antigravity.google/docs/subagents" target="_blank">Antigravity subagents</a></li>
+</ul>
+<h2 is-upgraded>What You Will Build</h2>
+<p>A single-page planner with:</p>
+<ul>
+<li>Three selectable weekend themes.</li>
+<li>Outfit, café, packing, and self-care sections.</li>
+<li>A persistent self-care checklist.</li>
+<li>Keyboard-friendly controls and clear empty and error states.</li>
+</ul>
+<h2 is-upgraded>What You Will Learn</h2>
+<ul>
+<li>How an orchestrator agent decomposes a goal and spawns subagents.</li>
+<li>How subagents run in parallel with isolated context windows.</li>
+<li>How report-only analysis subagents keep the orchestrator&#39;s context clean.</li>
+<li>How parallel generation stays conflict-free through disjoint file ownership against a shared interface.</li>
+<li>How the orchestrator reconciles findings and integrates the parts.</li>
+<li>How to preserve UX quality with a measurable acceptance checklist.</li>
+</ul>
+<p>Target duration: <strong>35–45 minutes</strong>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Prepare Antigravity 2.0" duration="4">
+        <h2 is-upgraded>Step 1: Install Antigravity 2.0</h2>
+<p>Download and install Antigravity 2.0 from:</p>
+<p><a href="https://antigravity.google/download" target="_blank">antigravity.google/download</a></p>
+<p>This codelab uses <strong>Antigravity 2.0 — the desktop command center, which has the white logo.</strong> Do <strong>not</strong> use the <strong>Antigravity IDE (black logo)</strong>; it is a different product surface, and the orchestrator-and-subagents workflow taught here is driven from the 2.0 desktop app. Confirm the app you open shows the white logo before continuing.</p>
+<p>Follow the current onboarding and sign-in flow shown by the application.</p>
+<aside class="warning"><p> Use the current official documentation for installation and sign-in. This codelab does not substitute CLI login commands for the Antigravity 2.0 app workflow. </p>
+</aside>
+<h2 is-upgraded>Step 2: Choose a Supported Sign-In Path</h2>
+<p>Choose the path available to you:</p>
+<ul>
+<li><strong>Recommended quick path:</strong> Sign in normally with your Google Account through the app onboarding flow.</li>
+<li><strong>Optional enterprise path:</strong> Use Antigravity through the Gemini Enterprise Agent Platform if your organization provides it.</li>
+</ul>
+<p>If you use the enterprise path, ask your administrator to complete the documented setup:</p>
+<ol type="1">
+<li>Create or select a Google Cloud project with billing enabled.</li>
+<li>Enable the Agent Platform API: <code>aiplatform.googleapis.com</code>.</li>
+<li>Grant administrators enabling services <code>roles/serviceusage.serviceUsageAdmin</code>.</li>
+<li>Grant Antigravity users <code>roles/aiplatform.user</code>.</li>
+</ol>
+<p>The enterprise guide documents supported Antigravity endpoints as <code>global</code>, <code>eu</code>, and <code>us</code>. Follow your organization&#39;s selected configuration.</p>
+<p>Official reference: <a href="https://antigravity.google/docs/enterprise" target="_blank">Use Antigravity with Gemini Enterprise Agent Platform</a></p>
+<h2 is-upgraded>Step 3: Confirm Prerequisites</h2>
+<p>This codelab requires a recent Python (for a local static server) and a browser. It also requires that Antigravity 2.0 exposes its native subagent delegation in the product surface you use.</p>
+<pre><code language="language-bash" class="language-bash">python3 --version
+</code></pre>
+<p>Confirm the app can spawn subagents before continuing.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Prepare Your Workspace" duration="3">
+        <p>Get your <code>workspace/</code> folder. It holds the data and UX contracts; you add your own Stitch design in the next step.</p>
+<p>Pull down just the <code>workspace/</code> folder with a sparse checkout — no copy step, this folder is your working directory:</p>
+<pre><code language="language-bash" class="language-bash">git clone --no-checkout --depth 1 https://github.com/evanca/gde-sprint-26-subagents-public.git
+cd gde-sprint-26-subagents-public
+git sparse-checkout init --cone
+git sparse-checkout set workspace
+git checkout
+</code></pre>
+<p class="image-container"><img alt="Cloning just the workspace folder with a sparse checkout" src="img/1045fbead0168c2e.gif"></p>
+<p>Your <code>workspace/</code> now contains:</p>
+<pre><code language="language-text" class="language-text">workspace/
+├── design/                 # your Stitch export goes here (next step)
+├── contracts/
+│   ├── acceptance.md       # UX contract
+│   └── schema.json         # data contract
+└── app/                    # agent-owned output (starts empty)
+</code></pre>
+<p>Inspect <code>workspace/contracts/acceptance.md</code>:</p>
+<pre><code language="language-markdown" class="language-markdown"># Acceptance checklist
+
+- Exactly three themes are available.
+- Selecting a theme updates every content section.
+- Checklist state persists after a page refresh.
+- Controls work with a keyboard and have visible focus.
+- Invalid or missing theme data produces a readable error.
+- Browser verification reports no console errors.
+</code></pre>
+<p>In the next step you generate your own Stitch prototype into <code>workspace/design/</code>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Generate the Starter UI with Stitch" duration="6">
+        <p>Stitch gives the agent a concrete visual starting point, reducing the time spent inventing a layout from scratch.</p>
+<h2 is-upgraded>Step 1: Create the Prototype</h2>
+<p>Open <a href="https://stitch.withgoogle.com/" target="_blank">Stitch</a> and enter:</p>
+<pre><code language="language-text" class="language-text">Design a compact Weekend Glow-Up Planner.
+
+Create a simple MVP app with a focused single-page experience.
+
+Include:
+- a theme selector
+- one hero card with a theme name and tagline
+- outfit, cafe, packing, and self-care sections
+- a clean desktop layout
+
+Use a polished, restrained lifestyle-planner aesthetic.
+Do not add complex features such as user authentication, accounts, admin
+dashboards, a backend, payments, social features, or runtime AI.
+</code></pre>
+<p class="image-container"><img alt="The initial Stitch prompt for the Weekend Glow-Up Planner" src="img/723fa3d93a790ad9.png"></p>
+<h2 is-upgraded>Step 2: Personalize and Iterate</h2>
+<p>Use one or two follow-up prompts to make the design feel like yours. You can mention your favorite colors, preferred visual style, or a layout detail you want changed.</p>
+<p>For example:</p>
+<pre><code language="language-text" class="language-text">Use lavender, cream, and deep plum as the main colors. Keep strong contrast
+for text and controls.
+</code></pre>
+<pre><code language="language-text" class="language-text">Tighten the section spacing and keep the theme selector easy to reach.
+</code></pre>
+<p>Keep the same required sections and stop once the desktop layout feels coherent. The goal is a useful visual direction, not a perfect final app.</p>
+<p class="image-container"><img alt="The iterated Stitch design with the chosen palette" src="img/289e1a8bba619b06.png"></p>
+<h2 is-upgraded>Step 3: Inspect and Export</h2>
+<p>Confirm that the generated design contains the requested sections and a coherent desktop layout. The exact visual output can vary.</p>
+<p>Export the design as a <code>.zip</code> and extract its contents directly into:</p>
+<pre><code language="language-text" class="language-text">workspace/design/
+</code></pre>
+<p>Treat the Stitch export as a prototype and visual reference. Antigravity will turn it into the small, deterministic app required by this lab.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Open the Workspace in Antigravity 2.0" duration="3">
+        <p>Antigravity agents work within <strong>Projects</strong>.</p>
+<ol type="1">
+<li>Open Antigravity 2.0.</li>
+<li>Click the folder <code>+</code> control.</li>
+<li>Choose <strong>New Project</strong>.</li>
+<li>Choose <strong>Add Folder(s)</strong> and select the <code>workspace</code> folder.</li>
+<li>Choose <strong>Create</strong>.</li>
+<li>Start an agent and select <strong>Local Mode</strong>.</li>
+</ol>
+<aside class="special"><p> Antigravity 2.0 is an agent-first command center, not an IDE, so it does not show a file-explorer tree — you will not see the `design/`, `contracts/`, and `app/` folders listed. That is expected; the agent still reads and writes them by path. </p>
+</aside>
+<p>Local Mode is appropriate here because one orchestrator owns the final implementation in <code>app/</code> and wires together the parts its subagents produce. The subagents return reports in Phase 1 and own separate files in Phase 2, so no two agents compete for the same file.</p>
+<p>Official reference: <a href="https://antigravity.google/docs/getting-started" target="_blank">Antigravity 2.0 getting started</a></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Run the Parallel Subagent Orchestration" duration="10">
+        <p>Send the following request to the agent. It instructs the agent to act as an orchestrator and to delegate to parallel subagents in both phases.</p>
+<pre><code language="language-text" class="language-text">Build a small, deterministic Weekend Glow-Up Planner in app/.
+
+Read first:
+- design/ as the visual prototype
+- contracts/schema.json as the data contract
+- contracts/acceptance.md as the completion contract
+
+Act as an orchestrator that delegates to parallel subagents. Do not do the
+analysis or the file generation yourself in a single pass.
+
+Phase 1 - parallel analysis (report-only subagents):
+Spawn three subagents and run them in parallel. Each only inspects and returns
+findings; none may edit files.
+1. Prototype analyst: inspect design/. Return at most 8 bullets on the reusable
+   layout and visual hierarchy.
+2. Data-risk analyst: inspect schema.json. Return at most 8 bullets on the
+   required fields, likely rendering risks, and a compact three-theme data plan.
+3. UX-verification analyst: inspect acceptance.md and design/. Return a short
+   keyboard, accessibility, and console-verification plan.
+
+After the three reports return, reconcile them and state the trade-offs you are
+making. Then define a small integration interface the next phase builds against:
+- the DOM contract index.html will expose (element ids/classes for each section,
+  the theme selector, and a polite live region)
+- the exact shape of data/themes.json (conforming to schema.json, exactly three
+  themes)
+- the CSS class hooks, and how app.js reads the data and updates the DOM
+
+Phase 2 - parallel generation (disjoint file ownership):
+You own app/index.html. Spawn three subagents and run them in parallel. Each owns
+exactly one file and builds strictly against the interface above. No two
+subagents may edit the same file.
+1. Data builder -&gt; app/data/themes.json: exactly three themes conforming to
+   schema.json.
+2. Style builder -&gt; app/styles.css: layout, the three theme palettes, and
+   visible keyboard focus.
+3. Behavior builder -&gt; app/app.js: load themes, render every section, theme
+   switching, checklist persistence via localStorage, readable empty and error
+   states, and a polite live region announcing result changes.
+
+Then, as the orchestrator:
+- write app/index.html to wire the three artifacts together
+- use plain HTML, CSS, JavaScript, and JSON only - no dependencies, backend,
+  authentication, or runtime AI
+- verify every item in contracts/acceptance.md
+- finish with a concise summary of what each subagent produced, how you
+  integrated them, the verification results, and any remaining limitation
+</code></pre>
+<p>While the request runs, observe Antigravity 2.0:</p>
+<ul>
+<li>Confirm the orchestrator spawned subagents rather than working alone.</li>
+<li>Confirm the three Phase 1 analysts ran concurrently and returned report-only findings.</li>
+<li>Confirm the three Phase 2 builders ran concurrently, each owning a different file.</li>
+<li>Notice that only the orchestrator writes <code>index.html</code> and performs integration.</li>
+</ul>
+<p>As the run starts, the orchestrator spawns the three Phase 1 analysts and runs them at once:</p>
+<p class="image-container"><img alt="Three Phase 1 analysis subagents running concurrently in Antigravity 2.0" src="img/e61477639d7052b8.png"></p>
+<p>Each analyst returns a focused, report-only result, and the orchestrator collects all three:</p>
+<p class="image-container"><img alt="The Phase 1 analyst reports returning to the orchestrator" src="img/f34c33146c025e30.png"></p>
+<p>The orchestrator reconciles the reports into an implementation plan — the integration interface the next phase builds against — and then pauses for your approval. Review the plan and click <strong>Proceed</strong> (or approve in chat) to launch Phase 2.</p>
+<p class="image-container"><img alt="The orchestrator&amp;rsquo;s implementation plan and the Proceed approval gate before Phase 2" src="img/eed246a574fba2f5.png"></p>
+<p>After you approve, the orchestrator spawns the three Phase 2 builders, each owning one file, and runs them concurrently:</p>
+<p class="image-container"><img alt="Three Phase 2 generation subagents running concurrently, each owning a different file" src="img/349011d02be6b59a.png"></p>
+<aside class="warning"><p> Parallel generation stays conflict-free here only because each subagent owns a different file built against the orchestrator&#39;s shared interface. If two subagents edited the same file in Local Mode, they would collide — a shared clone produces a `.git/index.lock` error and merge conflicts. When work cannot be partitioned into disjoint files, use isolated Git worktrees instead. </p>
+</aside>
+<h2 is-upgraded>Why This Structure Matters</h2>
+<p>The analyses are independent, so running them in parallel reduces waiting time, and report-only subagents act as context firewalls: detailed inspection does not occupy the orchestrator&#39;s working context. Generation parallelizes for the same reason, but only after the orchestrator fixes an interface that lets each file be built in isolation.</p>
+<p>The orchestrator still owns the architecture. It reconciles the reports, defines the contract, and integrates the parts rather than blindly concatenating subagent output.</p>
+<p>Official reference: <a href="https://antigravity.google/docs/subagents" target="_blank">Antigravity subagents</a></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Inspect the Orchestration Result" duration="4">
+        <p>Before running the app, inspect the agent&#39;s final response and the generated files.</p>
+<p>Confirm that:</p>
+<ul>
+<li>Each Phase 1 subagent received one narrow task and returned a report, not file edits.</li>
+<li>The orchestrator explicitly defined the integration interface before Phase 2.</li>
+<li>Each Phase 2 subagent owns exactly one file: <code>data/themes.json</code>, <code>styles.css</code>, or <code>app.js</code>.</li>
+<li>The orchestrator wrote <code>index.html</code> and explained at least one trade-off.</li>
+<li><code>app/</code> contains a static, dependency-free implementation.</li>
+</ul>
+<p>Do not continue until you can explain how the orchestrator turned three reports into one interface, and three files into one integrated app.</p>
+<p>The orchestrator closes with a walkthrough summarizing what each subagent produced and how the files were integrated:</p>
+<p class="image-container"><img alt="The orchestrator&amp;rsquo;s final build walkthrough and summary" src="img/16c6c6d178071ef3.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Verify the App" duration="6">
+        <p>Review the integrated app in a browser. The quickest path is to let the agent open it for you — send:</p>
+<pre><code language="language-text" class="language-text">Serve the app in app/ on a local port and open it in Chrome so I can review the Weekend Glow-Up Planner.
+</code></pre>
+<p>Or start a server yourself:</p>
+<pre><code language="language-bash" class="language-bash">cd workspace/app
+python3 -m http.server 8000
+</code></pre>
+<p>Open the app and verify:</p>
+<ol type="1">
+<li>Switch among all three themes and confirm every section updates.</li>
+<li>Complete a checklist item, refresh, and confirm it remains completed.</li>
+<li>Operate every control with the keyboard and confirm visible focus.</li>
+<li>Force a missing or invalid theme and confirm a readable error.</li>
+<li>Confirm the browser console has no errors.</li>
+</ol>
+<p class="image-container"><img alt="The verified Weekend Glow-Up Planner with the Cozy Bookworm theme — nav, theme selector, and hero section" src="img/36765c55c60b6513.png"></p>
+<p>Compare the result with <code>contracts/acceptance.md</code>, then decide: <strong>iterate on the design, or keep it as is.</strong></p>
+<p>To iterate, send one narrow correction to the orchestrator — name the exact file(s) to change so the disjoint ownership still holds. For example:</p>
+<pre><code language="language-text" class="language-text">Refine the Weekend Glow-Up Planner: &lt;describe the change you want&gt;. Change only the files needed for this change, leave the other files untouched, and keep contracts/acceptance.md passing.
+</code></pre>
+<p>Re-check only the items you changed. When the app satisfies the checklist, the build is done.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Conclusion" duration="2">
+        <p>You used a single Antigravity 2.0 orchestrator to spawn parallel subagents twice — first to analyze, then to generate disjoint parts of the app — and you shipped a verified UX from a Stitch prototype without any agent editing another&#39;s file.</p>
+<p>You practiced:</p>
+<ul>
+<li>Orchestrator-driven decomposition and subagent delegation.</li>
+<li>Parallel subagents with isolated context windows.</li>
+<li>Report-only analysis as a context firewall.</li>
+<li>Conflict-free parallel generation through disjoint file ownership.</li>
+<li>Interface-first integration owned by the orchestrator.</li>
+<li>A measurable UX contract that protects quality while agents accelerate delivery.</li>
+</ul>
+<p>Subagents parallelize work that can be partitioned cleanly. When peer agents must edit the same files concurrently, you need filesystem isolation instead — see <a href="https://happycode.studio/gde-sprint-26-worktrees-public/" target="_blank">Parallel Release Worktrees</a>.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
